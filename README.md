@@ -17,6 +17,14 @@ Abstract: Algorithmic fairness has conventionally adopted a perspective of racia
 
 ## Code
 - All eight benchmarks are in the folder `./benchmark_suite/`
+    - Format of dataset
+      ```
+      diff, equal = pickle.load(open(‘benchmark_suite/D1_1k.pkl’, ‘rb’))
+      len(diff) # 1000
+      len(equal) # 1000
+      diff[n] # n is 0-999 and an array of [question, answer choice (0 or 1), unique_id of scenario]
+      equal[n] # n is 0-999 and an array of [question, 2 for Descriptive and 0-1 for Normative, unique_id of scenario]. The answer choice is always 2 for these 1000 questions
+      ```
 - Code to generate each of the eight benchmarks are in `./benchmark_suite/generate_datasets/*/organize_data.py`
 - run_benchmark.py will run a model against the specified benchmarks.
     - `python3 run_benchmark.py --input_prompts 1000 1001 --model llama-3.1-7b` will run Llama-3.1 7b using HuggingFace on the D1 benchmark
