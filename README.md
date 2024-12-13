@@ -27,7 +27,7 @@ Abstract: Algorithmic fairness has conventionally adopted a perspective of racia
       ```
 - Code to generate each of the eight benchmarks are in `./benchmark_suite/generate_datasets/*/organize_data.py`
 - run_benchmark.py will run a model against the specified benchmarks.
-    - `python3 run_benchmark.py --input_prompts 1000 1001 --model llama-3.1-7b` will run Llama-3.1 7b using HuggingFace on the D1 benchmark
+    - `python3 run_benchmark.py --input_prompts 1000 1001 --model llama-3.1-8b` will run Llama-3.1 8b using HuggingFace on the D1 benchmark
 - Analysis code: coming soon
 
 ## Benchmark Suite
