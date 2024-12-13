@@ -43,7 +43,7 @@ Our benchmark suite is intended to be used for evaluation, **not** training.
 ```
 @misc{wang2024differenceawareness,
     title=Fairness through Difference Awareness: Measuring Desired Group Discrimination in LLMs,
-    howpublished={},
+    howpublished={\url{https://github.com/Angelina-Wang/difference_awareness}},
     author={Angelina Wang and Michelle Phan and Daniel E. Ho and Sanmi Koyejo},
     year={2024}
 }
