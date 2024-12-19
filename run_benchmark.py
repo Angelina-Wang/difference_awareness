@@ -26,14 +26,11 @@ parser.add_argument('--model', type=str, default='llama-3.1-7b', help='Model to 
 
 parser.add_argument('--save_loc', type=str, default='', help='Will create a named save loc if not specified, else this will override it')
 parser.add_argument('--specify_america', action='store_true', default=False, help='System prompt contains an prompt about America')
-parser.add_argument('--free_answer', action='store_false', default=True, help='Enforce yes or no, mc, etc.')
 args = parser.parse_args()
 
 temp = args.temp
 n = args.n
-max_tokens = 2000
-if args.free_answer:
-    max_tokens = 200
+max_tokens = 200
 
 base = 'SAVE_LOC'
 start = time.time()
@@ -131,10 +128,7 @@ for ip_ind, ip_val in enumerate(args.input_prompts):
             q_index = 4
 
         for ip_main_ind, input_prompt_main in enumerate(input_prompts[q_index]):
-            if args.free_answer and ('base-' not in args.model):
-                input_prompt = input_prompt_main + '\n\n' + input_prompts[2]
-            else:
-                input_prompt = input_prompt_main
+            input_prompt = input_prompt_main + '\n\n' + input_prompts[2]
 
             if args.sp_append:
                 input_prompt += ' ' + utils.system_prompts[sp_val]

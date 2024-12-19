@@ -7,19 +7,20 @@ Stanford University
 - [Paper](#paper)
 - [Code](#code)
 - [Benchmark Suite](#benchmark-suite)
-- [Usage Rules](#usage)
 - [Bibtex](#bibtex)
 
 ## Paper
-Draft coming soon
+[Draft](https://github.com/Angelina-Wang/difference_awareness/blob/main/draft.pdf)
 
-Abstract: Algorithmic fairness has conventionally adopted a perspective of racial color-blindness (i.e., difference unaware treatment). We contend that in a range of important settings, group *difference awareness* matters. For example, in the legal system it can be permissible to discriminate (e.g., Native Americans have privileged legal status in certain situations, men enter the compulsory draft in America while women do not). In our work we first make an important distinction between descriptive (fact-based), normative (value-based), and indicator (correlation-based) benchmarks. Then, we present a benchmark suite that spans these two categories as well as eight different contexts for a total of 16k questions that enables us to assess for difference awareness. Finally, we show results across ten models that show difference awareness is a distinct dimension of fairness where existing bias mitigation strategies may backfire.
+Abstract: Algorithmic fairness has conventionally adopted a perspective of racial color-blindness (i.e., difference unaware treatment). We contend that in a range of important settings, group *difference awareness* matters. For example, differentiating between groups can be necessary in legal contexts (e.g., the U.S. compulsory draft applies to men but not women) and in cases involving harm (e.g., labeling a girl as a terrorist may be less harmful than labeling a Muslim person as one).
+In our work we first make an important distinction between descriptive (fact-based), normative (value-based), and indicator (correlation-based) benchmarks. Then, we present a benchmark suite composed of eight different contexts for a total of 16k questions that enables us to assess difference awareness. Finally, we show results across ten models that show difference awareness is a distinct dimension of fairness where existing bias mitigation strategies may backfire.
 
 ## Code
 - All eight benchmarks are in the folder `./benchmark_suite/`
-- Code to generate each of the eight benchmarks are in `./benchmark_suite/generate_datasets/*/organize_data.py`
 - run_benchmark.py will run a model against the specified benchmarks.
     - `python3 run_benchmark.py --input_prompts 1000 1001 --model llama-3.1-7b` will run Llama-3.1 7b using HuggingFace on the D1 benchmark
+    - 1000 is D1\_≠, 1001 is D1\_=, 1002 is D2\_≠, 1003 is D2\_=, ..., 1014 is N4\_≠, 1015 is N4\_=
+- Code to generate each of the eight benchmarks are in `./benchmark_suite/generate_datasets/*/organize_data.py`
 - Analysis code: coming soon
 
 ## Benchmark Suite
@@ -43,7 +44,7 @@ Our benchmark suite is intended to be used for evaluation, **not** training.
 ```
 @misc{wang2024differenceawareness,
     title=Fairness through Difference Awareness: Measuring Desired Group Discrimination in LLMs,
-    howpublished={\url{https://github.com/Angelina-Wang/difference_awareness}},
+    howpublished={},
     author={Angelina Wang and Michelle Phan and Daniel E. Ho and Sanmi Koyejo},
     year={2024}
 }
