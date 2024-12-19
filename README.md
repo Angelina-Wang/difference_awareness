@@ -21,6 +21,14 @@ In our work we first make an important distinction between descriptive (fact-bas
     - `python3 run_benchmark.py --input_prompts 1000 1001 --model llama-3.1-7b` will run Llama-3.1 7b using HuggingFace on the D1 benchmark
     - 1000 is D1\_≠, 1001 is D1\_=, 1002 is D2\_≠, 1003 is D2\_=, ..., 1014 is N4\_≠, 1015 is N4\_=
 - Code to generate each of the eight benchmarks are in `./benchmark_suite/generate_datasets/*/organize_data.py`
+    - Format of dataset
+      ```
+      diff, equal = pickle.load(open(‘benchmark_suite/D1_1k.pkl’, ‘rb’))
+      len(diff) # 1000
+      len(equal) # 1000
+      diff[n] # n is 0-999 and an array of [question, answer choice (0 or 1), unique_id of scenario]
+      equal[n] # n is 0-999 and an array of [question, 2 for Descriptive and 0-1 for Normative, unique_id of scenario]. The answer choice is always 2 for these 1000 questions
+      ```
 - Analysis code: coming soon
 
 ## Benchmark Suite
@@ -44,7 +52,7 @@ Our benchmark suite is intended to be used for evaluation, **not** training.
 ```
 @misc{wang2024differenceawareness,
     title=Fairness through Difference Awareness: Measuring Desired Group Discrimination in LLMs,
-    howpublished={},
+    howpublished={\url{https://github.com/Angelina-Wang/difference_awareness}},
     author={Angelina Wang and Michelle Phan and Daniel E. Ho and Sanmi Koyejo},
     year={2024}
 }
