@@ -2,7 +2,6 @@
 Angelina Wang, Michelle Phan, Daniel E. Ho\*, Sanmi Koyejo\*<br>
 Stanford University
 
-
 ## Table of Contents
 - [Paper](#paper)
 - [Code](#code)
@@ -29,7 +28,9 @@ In our work we first make an important distinction between descriptive (fact-bas
       diff[n] # n is 0-999 and an array of [question, answer choice (0 or 1), unique_id of scenario]
       equal[n] # n is 0-999 and an array of [question, 2 for Descriptive and 0-1 for Normative, unique_id of scenario]. The answer choice is always 2 for these 1000 questions
       ```
-- Analysis code: coming soon
+- Analysis code: after run_benchmark.py is run (or output files are downloaded), from analysis/
+    - run analyze_files.py to generate analyzed_all.pkl
+    - run view_results.py to generate figures
 
 ## Benchmark Suite
 

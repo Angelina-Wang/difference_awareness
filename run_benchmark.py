@@ -32,7 +32,7 @@ temp = args.temp
 n = args.n
 max_tokens = 200
 
-base = 'SAVE_LOC'
+base = utils.BASE_FOLDER + '/' + utils.SAVE_FOLDER
 start = time.time()
 if len(set(args.input_prompts) & (set([1002, 1003, 1004, 1005, 1012, 1013]))) > 0 and not args.specify_america:
     assert False, "You should consider setting 'specify america' "
