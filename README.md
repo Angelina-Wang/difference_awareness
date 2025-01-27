@@ -31,6 +31,7 @@ In our work we first make an important distinction between descriptive (fact-bas
 - Analysis code: after run_benchmark.py is run (or output files are downloaded), from analysis/
     - run analyze_files.py to generate analyzed_all.pkl
     - run view_results.py to generate figures
+- LLM generations on our benchmark suite: analysis/outputs
 
 ## Benchmark Suite
 

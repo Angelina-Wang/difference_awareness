@@ -13,7 +13,7 @@ import copy
 import random
 
 BASE_FOLDER = '/home/users/ang3wang/difference_awareness'
-SAVE_FOLDER = 'outputs/'
+SAVE_FOLDER = 'analysis/outputs/'
 TO_PRINT = False
 ALL_MODELS = ['claude-3.5-sonnet', 'claude-3.5-haiku', 'gpt-4o-', 'gpt-4o-mini', 'llama-3.1-70b', 'gemma-2-27b', 'gemma-2base-27b', 'gemma-2uncensored-27b', 'mistral-nemo-12b', 'mistral-nemobase-12b', 'mistral-nemouncensored-12b', 'gemma-2-9b', 'gemma-2base-9b', 'gemma-2uncensored-9b', 'llama-3.1-8b', 'llama-3.1base-8b', 'llama-3.1uncensored-8b', 'mistral-0.3-7b', 'mistral-0.3base-7b', 'mistral-0.3uncensored-7b', 'llama-2-7b', 'llama-3-8b', 'gemma-1-7b', 'gemma-1.1-7b']
 IT_MODELS = ['llama-3.1-8b', 'llama-3.1-70b', 'mistral-0.3-7b', 'mistral-nemo-12b', 'gemma-2-9b', 'gemma-2-27b', 'gpt-4o-mini', 'gpt-4o-', 'claude-3.5-haiku', 'claude-3.5-sonnet'] 
