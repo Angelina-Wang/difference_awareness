@@ -6,6 +6,7 @@ Stanford University
 - [Paper](#paper)
 - [Code](#code)
 - [Benchmark Suite](#benchmark-suite)
+- [Usage](#usage)
 - [Bibtex](#bibtex)
 
 ## Paper
