@@ -10,7 +10,7 @@ Stanford University
 - [Bibtex](#bibtex)
 
 ## Paper
-[Preprint](https://arxiv.org/abs/2502.01926)
+[ACL 2025 Best Paper](https://arxiv.org/abs/2502.01926)
 
 Abstract: Algorithmic fairness has conventionally adopted a perspective of racial color-blindness (i.e., difference unaware treatment). We contend that in a range of important settings, group *difference awareness* matters. For example, differentiating between groups may be necessary in legal contexts (e.g., the U.S. compulsory draft applies to men but not women) and harm assessments (e.g., calling a girl a terrorist may be less harmful than calling a Muslim person one). In our work we first introduce an important distinction between descriptive (fact-based), normative (value-based), and correlation (association-based) benchmarks. This distinction is significant because each category requires distinct interpretation and mitigation tailored to its specific characteristics. Then, we present a benchmark suite composed of eight different scenarios for a total of 16k questions that enables us to assess difference awareness. Finally, we show results across ten models that demonstrate difference awareness is a distinct dimension of fairness where existing bias mitigation strategies may backfire.
 
@@ -54,7 +54,7 @@ Our benchmark suite is intended to be used for evaluation, **not** training.
 ```
 @article{wang2025differenceawareness,
     title=Fairness through Difference Awareness: Measuring Desired Group Discrimination in LLMs,
-    journal=arXiv:2502.01926,
+    journal=Annual Meeting of the Association for Computational Linguistics (ACL),
     author={Angelina Wang and Michelle Phan and Daniel E. Ho and Sanmi Koyejo},
     year={2025}
 }
