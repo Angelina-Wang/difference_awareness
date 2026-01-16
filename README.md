@@ -26,7 +26,7 @@ Abstract: Algorithmic fairness has conventionally adopted a perspective of racia
       len(diff) # 1000
       len(equal) # 1000
       diff[n] # n is 0-999 and an array of [question, answer choice (0 or 1), unique_id of scenario]
-      equal[n] # n is 0-999 and an array of [question, 2 for Descriptive and 0-1 for Normative, unique_id of scenario]. The answer choice is always 2 for these 1000 questions
+      equal[n] # n is 0-999 and an array of [question, 2 for Descriptive and 0-1 for Normative, unique_id of scenario]. The answer choice is always 2 for these 1000 questions, but the 0-1 for Normative indicates which wrong answer choice is the selection of the marginalized group.
       ```
 - Analysis code: after run_benchmark.py is run (or output files are downloaded), from analysis/
     - run analyze_files.py to generate analyzed_all.pkl
